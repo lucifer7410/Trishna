@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trishna</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        min-height: 100vh;
+        transition: background 0.5s ease;
+        position: relative;
+        overflow-x: hidden;
+      }
+      
+      /* Light Mode: Fresh Day */
+      body {
+        background: linear-gradient(120deg, #f0fdf4 0%, #dcfce7 30%, #ecfccb 60%, #e0f2fe 100%);
+        background-size: 400% 400%;
+        animation: day-flow 20s ease infinite;
+      }
+      
+      /* Light mode: Floating Pollen/Dust */
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background-image: 
+            radial-gradient(circle, rgba(34, 197, 94, 0.15) 1px, transparent 1px),
+            radial-gradient(circle, rgba(234, 179, 8, 0.1) 1px, transparent 1px);
+        background-size: 60px 60px;
+        background-position: 0 0;
+        mask-image: radial-gradient(circle at 50% 50%, black, transparent 90%);
+        z-index: -1;
+        pointer-events: none;
+        animation: floating-dust 60s linear infinite;
+      }
+
+      /* Dark Mode: Deep Mystical Night */
+      html.dark body {
+        background: linear-gradient(135deg, #020617 0%, #064e3b 40%, #111827 80%, #0f172a 100%);
+        background-size: 300% 300%;
+        animation: night-flow 25s ease infinite;
+        color: #f0fdf4;
+      }
+
+      /* Dark mode: Stars */
+      html.dark body::before {
+        content: "";
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background-image: 
+            radial-gradient(1.5px 1.5px at 50px 100px, rgba(255,255,255,0.7), transparent),
+            radial-gradient(1px 1px at 150px 200px, rgba(255,255,255,0.5), transparent),
+            radial-gradient(2px 2px at 300px 50px, rgba(255,255,255,0.6), transparent);
+        background-size: 550px 550px;
+        mask-image: none;
+        animation: star-drift 120s linear infinite;
+        opacity: 0.6;
+      }
+
+      /* Dark mode: Fireflies/Glow */
+      html.dark body::after {
+        content: "";
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: 
+            radial-gradient(circle at 20% 80%, rgba(74, 222, 128, 0.15), transparent 200px),
+            radial-gradient(circle at 80% 20%, rgba(34, 197, 94, 0.1), transparent 300px);
+        filter: blur(20px);
+        animation: glow-pulse 10s ease-in-out infinite alternate;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      @keyframes day-flow {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      @keyframes night-flow {
+        0% { background-position: 0% 20%; }
+        50% { background-position: 100% 80%; }
+        100% { background-position: 0% 20%; }
+      }
+
+      @keyframes floating-dust {
+        0% { transform: translateY(0) translateX(0); }
+        100% { transform: translateY(-100px) translateX(50px); }
+      }
+
+      @keyframes star-drift {
+        0% { background-position: 0 0; }
+        100% { background-position: -50px -100px; }
+      }
+
+      @keyframes glow-pulse {
+        0% { opacity: 0.5; transform: scale(1); }
+        50% { opacity: 0.8; transform: scale(1.1); }
+        100% { opacity: 0.5; transform: scale(1); }
+      }
+
+      /* Animations */
+      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+      @keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes scaleIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+      
+      .animate-fade-in { animation: fadeIn 0.3s ease-out forwards; }
+      .animate-fade-in-up { animation: fadeInUp 0.5s ease-out forwards; }
+      .animate-scale-in { animation: scaleIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+      html.dark ::-webkit-scrollbar-thumb { background: #334155; }
+      html.dark ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-markdown": "https://esm.sh/react-markdown@^10.1.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
