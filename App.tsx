@@ -79,7 +79,7 @@ const App: React.FC = () => {
 
     // Explicit fallback for immediate fix in web containers
     if (!key || key.length < 20 || key.includes('INSERT')) {
-        key = 'AIzaSyBmyMGJwO4zndui8smrJqN99tkrzDr2JtI';
+        key = 'YOUR_GEMINI_API_KEY';
     }
 
     if (!key || key.length < 20 || key.includes('INSERT')) {
