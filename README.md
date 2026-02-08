@@ -4,9 +4,11 @@
 Trishna is a multilingual, AI-powered super-app that bridges the gap between traditional farming and modern technology. It empowers farmers and home gardeners with hyper-local weather alerts, instant plant disease diagnosis, and personalized crop calendars—helping them navigate climate change with confidence and sustainable abundance.
 
 ## Inspiration
-Agriculture in India is more than just an occupation; it's a way of life that sustains over a billion people. However, the modern "Kisan" (Farmer) faces an unprecedented crisis: erratic climate change, degrading soil health, and a lack of accessible, real-time agronomy expertise.
-
-We realized that while high-tech farming solutions exist, they are often too complex, English-centric, or expensive for smallholder farmers and home gardeners. We wanted to build a bridge—**Trishna** (meaning "Thirst" or deep desire)—that connects ancient agricultural wisdom with the cutting-edge power of Generative AI. Our goal was to create a companion that doesn't just display data, but *understands* the farmer's specific context (soil, season, land size) and speaks their language.
+I grew up in a farmer's family in India, where agriculture isn't just a livelihood — it's the heartbeat sustaining over a billion lives. I watched my grandparents and parents toil endlessly, wrestling with erratic climate change, crumbling soil health, and that crushing frustration of needing answers right now — but finding none.
+The high-tech solutions existed, sure. But they were built for agri-corporations, not for us — too complex, too English-heavy, too expensive. I saw smallholder farmers and home gardeners left behind while the world talked about 'AI revolution'.
+That's when I felt it — **Trishna**(तृष्णा). In Hindi, it means 'Thirst' — that deep, burning desire for something better. Not just water for crops, but knowledge when you need it, in your language, for your soil, your season, your plot size.
+I built Trishna to be that bridge — from our ancient farming wisdom to Generative AI's power. Not an app that spits data, but a companion that *understands* your context and chats back like a trusted friend in the field.
+Because the future of farming shouldn't be a privilege. It should be a right.
 
 ## What it does
 Trishna is a comprehensive, multimodal AI assistant designed for both commercial Farmers and home Gardeners. It leverages the **Google Gemini API** to provide:
