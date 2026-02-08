@@ -1,0 +1,9 @@
+{
+  "name": "Trishna: Climate-Smart Kisan Companion",
+  "description": "A climate-smart assistant for farmers and gardeners providing weather alerts, crop & plant recommendations, disease diagnosis, and localized learning resources.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
