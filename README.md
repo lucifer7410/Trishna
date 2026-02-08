@@ -20,6 +20,14 @@ Trishna is a comprehensive, multimodal AI assistant designed for both commercial
 5.  **Multilingual Support:** The entire app, including complex AI analysis, works in **10+ Indian languages** (Hindi, Marathi, Tamil, etc.) and offers voice-to-text support for accessibility.
 6.  **Market Intelligence:** Provides insights on current mandi (market) prices and trends for local commodities.
 
+## Gemini Integration & Features
+Trishna is built upon the **Gemini 3** architecture (`gemini-3-pro-preview`), leveraging its advanced reasoning and multimodal capabilities to deliver a "Climate-Smart" experience:
+
+1.  **Multimodal Vision Analysis:** We utilize Gemini's vision capabilities for the **Plant Doctor** and **Soil Analysis** features. The model processes raw image inputs (leaves, soil texture, fertilizer labels) alongside textual user context (location, season) to provide agronomic diagnoses.
+2.  **Google Search Grounding:** To ensure farmers receive the most up-to-date information, we use the `googleSearch` tool. This is critical for fetching real-time **Market Rates (Mandi Prices)** and finding relevant, recent educational videos, reducing AI hallucinations regarding dynamic data.
+3.  **Native JSON Output:** The application relies heavily on Gemini's `responseMimeType: "application/json"` capability. This allows us to transform unstructured agricultural advice into strict, type-safe JSON schemas that directly power our UI components (Weather Widgets, Crop Cards, and Advisory Panels).
+4.  **System Instructions & Persona:** We leverage Gemini 3's strong instruction-following abilities to switch personas dynamically—acting as a "Meteorologist" for weather, an "Agronomist" for crops, and a "Market Analyst" for prices—while maintaining a localized, empathetic tone suitable for rural users.
+
 ## How we built it
 We built Trishna as a Progressive Web App (PWA) concept using a modern tech stack:
 
