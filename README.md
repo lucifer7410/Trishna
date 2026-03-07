@@ -68,7 +68,7 @@ We built Trishna as a Progressive Web App (PWA) concept using a modern tech stac
 *   **Community Grounding:** Connecting the AI insights with a "Community" tab where farmers can validate the AI's advice with peers.
 *   **IoT Integration:** In the future, we want Trishna to connect directly to soil moisture sensors to trigger the "Watering Alerts" automatically.
 
-## Testing instructions if applicable
+## Testing instructions
 
 To test the application fully, please follow these steps:
 
